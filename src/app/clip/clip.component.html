@@ -1,0 +1,10 @@
+<ul *ngIf="info" class="scenes">
+  <li *ngFor="let scene of scenes" [ngClass]="{active:activeScene===scene}">
+    <ul class="frames">
+      <li *ngFor="let frame of scene.frames" 
+        [ngClass]="{active:frame.isActive}"
+        [ngStyle]="frame.style" (click)="select(scene, frame)">
+      </li>
+    </ul>
+  </li>
+</ul>

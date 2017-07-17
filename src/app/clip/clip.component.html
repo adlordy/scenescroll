@@ -1,10 +1,6 @@
 <ul *ngIf="info" class="scenes">
-  <li *ngFor="let scene of scenes" [ngClass]="{active:activeScene===scene}">
-    <ul class="frames">
-      <li *ngFor="let frame of scene.frames" 
-        [ngClass]="{active:frame.isActive}"
-        [ngStyle]="frame.style" (click)="select(scene, frame)">
-      </li>
-    </ul>
+  <li *ngFor="let scene of info.frames;let i = index" [ngClass]="{active:i === selectedScene}">
+    <scene-view [scene]="scene" [index]="i" (selected)="select($event)"></scene-view>
+    <clip-boundary *ngIf="i &lt; info.frames.length - 1" [frame]="scene.stop"></clip-boundary>
   </li>
 </ul>

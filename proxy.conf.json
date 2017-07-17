@@ -1,6 +1,6 @@
 {
    "/data": {
-      "target": "http://localhost:80",
+      "target": "http://localhost:8095",
       "secure": false
    }
 }

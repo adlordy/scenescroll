@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { ClipComponent } from './clip/clip.component';
+import { SceneViewComponent } from './scene-view/scene-view.component';
+import { ClipBoundaryComponent } from './clip-boundary/clip-boundary.component';
 
 const appRoutes = <Routes>[
   { path: "clip/:id", component: ClipComponent },
@@ -15,7 +17,9 @@ const appRoutes = <Routes>[
 @NgModule({
   declarations: [
     AppComponent,
-    ClipComponent
+    ClipComponent,
+    SceneViewComponent,
+    ClipBoundaryComponent
   ],
   imports: [
     BrowserModule,

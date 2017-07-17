@@ -1,0 +1,19 @@
+ul.frames > li{
+    position: absolute;
+    list-style: none;
+    width: 320px;
+    height: 240px;
+    display: block;
+    transform-origin: 0% 0%;
+    transition: all 0.1s ease-out;
+    cursor: pointer;
+    transform: scale(0.5);
+    padding: 0;
+    margin: 0;
+    left: 0;
+}
+
+ul.frames > li.active{
+    transform: scale(1);
+    z-index: 1;
+}

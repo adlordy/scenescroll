@@ -1,0 +1,42 @@
+.clip-boundary{
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 100%;
+    border: 1px solid lightgray;
+    background-color: lightgray;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    left: 160px;
+}
+
+.clip-boundary:hover{
+    background-color: lightgreen;
+    border-color: darkgreen;
+}
+
+.clip-boundary:focus{
+    outline: none;
+}
+
+.clip-boundary.start, .clip-boundary.stop {
+    background-color: green;
+    border-color: darkgreen;
+}
+
+
+.clip-boundary.start::after,
+.clip-boundary.stop::after{
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.clip-boundary.start::after{
+    content: ">";
+}
+
+.clip-boundary.stop::after{
+    content: "<";
+}

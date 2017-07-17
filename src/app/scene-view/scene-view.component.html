@@ -1,0 +1,6 @@
+<ul class="frames">
+  <li *ngFor="let frame of frames" 
+    [ngClass]="{active:frame.isActive}"
+    [ngStyle]="frame.style" (click)="select(frame)">
+  </li>
+</ul>
